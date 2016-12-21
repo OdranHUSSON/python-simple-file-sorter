@@ -75,7 +75,8 @@ def move_movies(directory):
 	global series_folder
 	global movies_folder
 
-	series_regex = "(.*)S([0-9]{2})E([0-9]{2}).*(\..{3})"
+	old_series_regex = "(.*)S([0-9]{2})E([0-9]{2}).*(\..{3})"
+	series_regex = "(?:\[.*\]){0,1}(.*)S([0-9]{2})E([0-9]{2}).*(\..{3})"
 	os.chdir( directory )
 	matchs=[]
 	for extension in video_extensions:
