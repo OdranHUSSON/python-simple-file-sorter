@@ -1,0 +1,3 @@
+- Capitalize series name to avoid duplicate (Ex : Serie.one duplicate Serie.One)
+- Add a silent mode
+- Add a read/wright rights check 
