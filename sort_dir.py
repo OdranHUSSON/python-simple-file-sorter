@@ -8,6 +8,7 @@ import glob, os, sys, shutil, re
 movies_folder="/var/www/download/Films/"
 series_folder="/var/www/download/Series/"
 music_folder="/var/www/download/Musique/"
+debug = False
 
 "Gettings directory in arguments"
 if len(sys.argv) != 2:
@@ -101,27 +102,32 @@ def show_result(directory):
 	global total_audio_files
 	global total_video_files
 	global total_sub_folders
+	global debug
 	
-	print "Results for folder \""+directory+"\" :"
-	print "\t",total_audio_files," audio file(s)"
-	print "\t",total_video_files," video file(s)"
-	print "\t",total_sub_folders," sub folder(s)"
+	if(debug):
+		print "Results for folder \""+directory+"\" :"
+		print "\t",total_audio_files," audio file(s)"
+		print "\t",total_video_files," video file(s)"
+		print "\t",total_sub_folders," sub folder(s)"
 
 	if ( total_sub_folders == 0 and total_video_files > 0 and total_audio_files < total_video_files):
 		#Multiple video files can be multiple movies or series
-		print "Multiple movies or series :"
+		if(debug):
+			print "Multiple movies or series :"
 		file = directory.split('/')[-1]
 		move_movies(directory)
 		os.chdir(cwd)
 	elif (total_sub_folders >= 0 and total_audio_files > 0):
 		#Band / album
-		print "Seems like a band / album"
+		if(debug):
+			print "Seems like a band / album"
 		file = directory.split('/')[-1]
 		print "Moving \""+directory+"/"+file+"\" to Music folder / "+file
 		shutil.move(directory+"/",music_folder+"/"+file)
 	else :
 		#No match
-		print "No match !"
+		if(debug) :
+			print "No match !"
 	total_audio_files = 0
 	total_video_files = 0
 	total_sub_folders = 0
