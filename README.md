@@ -2,9 +2,11 @@
 ----
 ## Simple python file sorter 
 Odran HUSSON
-https://odran-husson.fr
+https://odran.cc
 
-Simple tool to recursivly and automaticly sort files in asked repertory
+
+Simple tool to recursivly and automaticly sort files in asked repertory.
+Usefull for download folders. The sorted folders then can be added to a webserver to download the files or to a plex server.
 
 ## Usage
 Change the following lines to your wanted outputs folders : 
@@ -28,11 +30,11 @@ Results for folder "/var/www/html/file-sorter/Arrow2" :
 	5  video file(s)
 	0  sub folder(s)
 Multiple movies or series :
-	Moving "Arrow.S03E05.avi" to Series folder
-	Moving "Arrow.S03E01.avi" to Series folder
-	Moving "Arrow.S03E03.avi" to Series folder
-	Moving "Arrow.S03E02.avi" to Series folder
-	Moving "Arrow.S03E04.avi" to Series folder
+	Moving "Serie.S03E05.avi" to Series folder
+	Moving "Serie.S03E01.avi" to Series folder
+	Moving "Serie.S03E03.avi" to Series folder
+	Moving "Serie.S03E02.avi" to Series folder
+	Moving "Serie.S03E04.avi" to Series folder
 Results for folder "/var/www/html/file-sorter/FILM" :
 	0  audio file(s)
 	0  video file(s)
