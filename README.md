@@ -25,7 +25,7 @@ python sort_dir.py /home/user/folder_to_sort
 ## Sample output
 python sort_dir.py movie/
 ```
-Results for folder "/var/www/html/file-sorter/Arrow2" :
+Results for folder "/var/www/html/file-sorter/Serie" :
 	0  audio file(s)
 	5  video file(s)
 	0  sub folder(s)
