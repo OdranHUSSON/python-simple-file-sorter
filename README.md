@@ -43,3 +43,5 @@ No match !
 
 ```
 
+## Informations
+This script has been tested on debian and mac os, not tested on windows
